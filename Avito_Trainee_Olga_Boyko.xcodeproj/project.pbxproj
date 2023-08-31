@@ -24,6 +24,7 @@
 		0C65CB832A98A1BA000ABC0C /* ProductsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C65CB822A98A1BA000ABC0C /* ProductsViewController.swift */; };
 		0C65CB8B2A98A1BB000ABC0C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0C65CB8A2A98A1BB000ABC0C /* Assets.xcassets */; };
 		0C65CB8E2A98A1BB000ABC0C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0C65CB8C2A98A1BB000ABC0C /* LaunchScreen.storyboard */; };
+		748FB0102AA099C900433FCF /* ProductsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 748FB00F2AA099C900433FCF /* ProductsController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +47,7 @@
 		0C65CB8A2A98A1BB000ABC0C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0C65CB8D2A98A1BB000ABC0C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0C65CB8F2A98A1BB000ABC0C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		748FB00F2AA099C900433FCF /* ProductsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +75,7 @@
 				0C4E77622A98EA04001A79DD /* ProductsCollectionViewCell.swift */,
 				0C4E77642A98EE5D001A79DD /* LoadingCollectionViewCell.swift */,
 				0C4E77662A98EF7F001A79DD /* ErrorCollectionViewCell.swift */,
+				0C65CB822A98A1BA000ABC0C /* ProductsViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -80,13 +83,13 @@
 		0C4E774F2A98A733001A79DD /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				0C65CB822A98A1BA000ABC0C /* ProductsViewController.swift */,
 				0C4E77532A98AC61001A79DD /* TabBarController.swift */,
 				0C4E77552A98AE67001A79DD /* FavoritesViewController.swift */,
 				0C4E77572A98AF6D001A79DD /* AdsViewController.swift */,
 				0C4E77592A98AF8E001A79DD /* MessagesViewController.swift */,
 				0C4E775B2A98AFA9001A79DD /* ProfileViewController.swift */,
 				0C4E77682A98F30A001A79DD /* DetailViewController.swift */,
+				748FB00F2AA099C900433FCF /* ProductsController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -216,6 +219,7 @@
 				0C4E775A2A98AF8E001A79DD /* MessagesViewController.swift in Sources */,
 				0C4E77582A98AF6D001A79DD /* AdsViewController.swift in Sources */,
 				0C65CB832A98A1BA000ABC0C /* ProductsViewController.swift in Sources */,
+				748FB0102AA099C900433FCF /* ProductsController.swift in Sources */,
 				0C65CB7F2A98A1BA000ABC0C /* AppDelegate.swift in Sources */,
 				0C4E77652A98EE5D001A79DD /* LoadingCollectionViewCell.swift in Sources */,
 				0C4E77612A98CD06001A79DD /* AppConfiguration.swift in Sources */,

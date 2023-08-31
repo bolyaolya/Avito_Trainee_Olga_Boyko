@@ -16,7 +16,6 @@ final class ProductsViewController: UIViewController {
         case error
         case content
     }
-    
     var products: [Products] = []
     var singleProduct: SingleProductResponse?
     lazy var stateofLoading: State = .loading
@@ -64,26 +63,26 @@ final class ProductsViewController: UIViewController {
         setupConstraints()
     }
     
-    func loadData() {
-        stateofLoading = .loading
-        collectionView.reloadData()
-        
-        NetworkService.fetchData(for: .products) { result in
+    private func loadData() {
+            stateofLoading = .loading
+            collectionView.reloadData()
             
-            DispatchQueue.main.async {
-                switch result {
-                case .success(let products):
-                    self.products = products
-                    print("Number of items: \(products.count)")
-                    self.stateofLoading = .content
-                case .failure(let error):
-                    self.stateofLoading = .error
+            let networkService = NetworkService()
+            let productsController = ProductsController(networkService: networkService)
+            
+            productsController.loadProducts(
+                completion: { [weak self] products in
+                    self?.products = products
+                    self?.stateofLoading = .content
+                    self?.collectionView.reloadData()
+                },
+                onError: { [weak self] error in
+                    self?.stateofLoading = .error
+                    self?.collectionView.reloadData()
                     print("Error loading products:", error)
                 }
-                self.collectionView.reloadData()
-            }
+            )
         }
-    }
     
     private func setupConstraints() {
         NSLayoutConstraint.activate([
